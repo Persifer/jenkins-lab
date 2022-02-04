@@ -1,0 +1,18 @@
+pipeline{
+    
+    agent {
+        docker { image 'python' }
+    }
+    
+    stages {
+            stage('Docker test') {
+                steps {
+                    sh 'wget https://raw.githubusercontent.com/Persifer/jenkins-lab/main/test.py'
+                    sh 'python test.py'
+                }
+            }
+        }
+
+
+
+}
