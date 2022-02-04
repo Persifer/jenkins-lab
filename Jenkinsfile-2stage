@@ -5,7 +5,7 @@ pipeline{
   stages{
         stage('Test'){
               agent { 
-                  any 
+                  node { label 'test' }
               }
               
               
@@ -18,7 +18,7 @@ pipeline{
         stage('Deploy'){
         
               agent { 
-                  any 
+                  node { label 'production' } 
               }
               
               steps{
