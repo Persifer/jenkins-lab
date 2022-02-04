@@ -1,0 +1,19 @@
+pipeline{
+    
+    agent {
+        docker { image 'ubuntu' }
+    }
+    
+    stages {
+            stage('Docker test') {
+                steps {
+                    sh 'hostname'
+                    sh 'whoami'
+                    
+                }
+            }
+        }
+
+
+
+}
